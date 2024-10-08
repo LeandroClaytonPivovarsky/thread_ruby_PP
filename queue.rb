@@ -37,7 +37,7 @@ class Consumidor
       puts "Este #{elemento} foi consumido"
     end
 
-    puts "#{@targetedThread.alive}"
+    puts "Tá vivo?#{@targetedThread.alive}"
   end
 
   def join
@@ -48,7 +48,9 @@ end
 if __FILE__ == $0
   fila = Queue.new
   produtor = Produtor.new(fila)
-  consumidor = Consumidor.new(fila, produtor.thread)
+  consumidor = Consumidor.new(fila, produtor.thread)  
+
+  
   produtor.join
 
 end
