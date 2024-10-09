@@ -36,8 +36,6 @@ class Consumidor
       elemento = @fila.pop
       puts "Este #{elemento} foi consumido"
     end
-
-    puts "Tá vivo?#{@targetedThread.alive}"
   end
 
   def join
